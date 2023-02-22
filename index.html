@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mark Witt BioSite Project - Home Page</title>
+        <link href="site.css" type="text/css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <header>
+        <h1>Hailie Witt Bio-Site</h1>
+    </header>
+    <body>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Home</a>
+            <a href="story.html">Hailie's Story</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="wish.html">Wish Trip</a>
+            <a href="facts.html">Childhood Cancer Facts</a>
+            <a href="resources.html">Resources</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+        <div class="container">
+            <div class="left-div">
+                <h1>Hailie Marie Witt</h1>
+                <p>This is the story of a courageous and heroic young lady that fought against overwhelming circumstances; becoming and inspiration and hero to everyone she met. It was often said by her medical team that “Hailie fought cancer harder, stronger and braver than most adults.” Instead of letting her diagnosis consumer and define her, she insisted on blazing her own trail, without care of what others thought of her. She learned the motto of NEGU, “Never Ever Give Up” from the Jessie Reese Foundation during the early days of her first battle with childhood cancer, and lived it every single day; refusing to let her disease define her or bring her down. Hailie fought for her life three separate times starting at 10 years old, and finally lost her third battle just 49 days after her 16th birthday.  Check out <a href="story.html">Hailie’s Journey</a> through her battles. </p>
+                <p>Childhood cancer is not like adult cancers. There are no pre-determining or environmental factors. There is no way to determine or test ahead of time, and often times the cancer grows undetected much longer than in adults. Childhood cancer is pure random chance, it does not discriminate, and any child can be affected. Every child has about a 1 in 300 chance of being diagnosed with cancer before their 19th birthday. Despite the dangers and occurrence rates, childhood cancer is still much of a taboo subject. No one likes to talk about cancer, much less so when it is childhood cancer. Check out our <a href="facts.html">Facts</a> and <a href="resources.html">Resources</a> pages to learn more. </p>
+                <br><hr>
+                <p style="text-align: center;"><a href="https://www.facebook.com/Gohailie" target="_blank" title="Team Hailie Facebook Page"><i class="fa fa-facebook-square social" style="font-size: 30px;"></i></a> Join us on Facebook to view past stories, photos and connect with Hailie's Journey</p>
+            </div>
+            <div class="right-div">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                    <img src="images/20120810-310.JPG">
+                    <div class="text">Hailie - before her battle with childhood cancer</div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                    <img src="images/20110508-IMG_1066.JPG">
+                    <div class="text">Before her battle with childhood cancer</div>
+                    </div>                
+                    <div class="mySlides fade">
+                    <img src="images/IMG_0090.JPG">
+                    <div class="text">"I am stronger than cancer!"</div>
+                    </div>
+                    <div class="mySlides fade">
+                    <img src="images/IMG_0202.JPG">
+                    <div class="text">Hailie - after her first battle</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="images/IMG_0017 (2).JPG">
+                        <div class="text">Hailie - during her first battle</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="images/IMG_00011.JPG">
+                        <div class="text">Hailie - sleeping in the hospital</div>
+                    </div>
+
+                
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    //navbar javascript controls
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+        x.className += " responsive";
+        } else {
+        x.className = "topnav";
+        }
+    }
+
+    //slideshow javascript controls
+    let slideIndex = 0;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    }
+    
+</script>
+
